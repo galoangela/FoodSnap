@@ -1,0 +1,6 @@
+{
+  "name": "FoodSnap",
+  "description": "AI-powered food recognition and nutrition scanner with instant ingredient insights and meal scan history.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

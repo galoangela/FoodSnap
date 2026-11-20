@@ -36,7 +36,14 @@ jobs:
 
       - name: Initialize and sync Capacitor Android
         run: |
-          npx cap init FoodSnap com.galoangela.foodsnap --web-dir=dist || true
+          rm -f capacitor.config.ts
+          cat << 'EOF' > capacitor.config.json
+          {
+            "appId": "com.galoangela.foodsnap",
+            "appName": "FoodSnap",
+            "webDir": "dist"
+          }
+          EOF
           npx cap add android || true
           npx cap sync android
 
